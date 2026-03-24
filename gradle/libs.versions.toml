@@ -1,0 +1,270 @@
+[versions]
+# 빌드 툴체인 및 플러그인 버전
+agp = "9.0.1"
+kotlin = "2.3.0"
+ksp = "2.3.4"
+androidTools = "32.0.0-rc02"
+composeMultiplatform = "1.10.0"
+compose-jetbrains = "1.8.2"
+composeBom = "2025.07.00"
+compose-lifecycle = "2.10.0-alpha06"
+navigation-compose = "2.9.1"
+google-services = "4.4.3"
+conveyor = "1.12"
+buildkonfig = "0.17.1"
+
+# Navigation3 버전
+navigation3-ui = "1.0.0-alpha05"
+
+# 프로젝트 식별자 및 Android SDK
+# 용도: 모듈 경로 기반 패키지명(pathToPackageName)의 루트 접두사.
+# 활용: com.yourssu.convention.kmp.library / com.yourssu.convention.cmp.application의 namespace,
+# com.yourssu.convention.buildkonfig의 packageName 생성에 사용.
+projectPackagePrefix = "com.crazyenough.unknown"
+
+# 용도: Android 애플리케이션 모듈의 namespace 기준값.
+# 활용: com.yourssu.convention.android.application에서 ApplicationExtension.namespace에 직접 적용.
+projectApplicationNamespace = "com.crazyenough.unknown.android"
+
+# 용도: Android 앱의 배포 식별자(applicationId).
+# 활용: com.yourssu.convention.android.application의 defaultConfig.applicationId에 적용.
+projectApplicationId = "com.crazyenough.unknown"
+
+# 용도: Android 컴파일 SDK 레벨 통일.
+# 활용: com.yourssu.convention.android.application(내부 configureKotlinAndroid),
+# com.yourssu.convention.kmp.library, com.yourssu.convention.cmp.application에 적용.
+projectCompileSdkVersion = "36"
+
+# 용도: Android 최소 지원 SDK 레벨 통일.
+# 활용: com.yourssu.convention.android.application(내부 configureKotlinAndroid),
+# com.yourssu.convention.kmp.library, com.yourssu.convention.cmp.application에 적용.
+projectMinSdkVersion = "24"
+
+# 용도: Android 타깃 SDK 레벨 지정.
+# 활용: com.yourssu.convention.android.application의 defaultConfig.targetSdk에 적용.
+projectTargetSdkVersion = "36"
+
+# 용도: Android 앱 버전 코드(정수) 관리.
+# 활용: com.yourssu.convention.android.application의 defaultConfig.versionCode에 적용.
+projectVersionCode = "1"
+
+# 용도: Android 앱 버전 이름(문자열) 관리.
+# 활용: com.yourssu.convention.android.application의 defaultConfig.versionName에 적용.
+projectVersionName = "1.0"
+
+# AndroidX 및 테스트 생태계
+androidx-activity = "1.12.2"
+androidx-appcompat = "1.7.1"
+androidx-core = "1.17.0"
+androidx-lifecycle = "2.9.6"
+core-splashscreen = "1.0.1"
+androidx-test-core = "1.7.0"
+androidx-testExt = "1.3.0"
+androidx-runner = "1.6.2"
+androidx-espresso = "3.7.0"
+junit = "4.13.2"
+
+# Kotlin 멀티플랫폼 유틸리티
+kotlinx-coroutines = "1.10.2"
+
+# Auth 기능: auth 테스트에서 사용되는 코루틴 테스트 버전
+kotlinx-coroutines-test = "1.10.2"
+kotlinx-serialization = "1.9.0"
+kotlinx-datetime = "0.7.1"
+androidDesugarJdkLibs = "2.1.5"
+
+# UI, 상태, 내비게이션 지원
+adaptive = "1.3.0-alpha02"
+material-icons = "1.7.3"
+jetbrains-core-bundle = "1.0.1"
+jetbrains-savedstate = "1.3.1"
+
+# 네트워킹, DI, 저장소 및 서비스
+ktor = "3.3.3"
+koin = "4.1.0"
+room = "2.7.2"
+sqlite = "2.5.2"
+datastore = "1.1.7"
+firebase-bom = "34.0.0"
+coil = "3.3.0"
+coil-network = "3.3.0"
+moko = "0.19.1"
+kermit = "2.0.6"
+
+# 로그인/자격증명·소셜 로그인 의존성 버전
+androidx-credentials = "1.6.0-rc02"
+googleid = "1.2.0"
+play-services-auth = "21.1.1"
+kakao = "2.23.0"
+
+[libraries]
+# Compose 멀티플랫폼(JetBrains)
+compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose-jetbrains" }
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-jetbrains" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-jetbrains" }
+compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "compose-jetbrains" }
+compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "composeMultiplatform" }
+compose-ui-tooling-preview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
+compose-ui-tooling = { module = "org.jetbrains.compose.ui:ui-tooling", version.ref = "composeMultiplatform" }
+jetbrains-compose-backhandler = { module = "org.jetbrains.compose.ui:ui-backhandler", version.ref = "composeMultiplatform" }
+jetbrains-compose-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigation-compose" }
+jetbrains-compose-material-icons-core = { module = "org.jetbrains.compose.material:material-icons-core", version.ref = "material-icons" }
+jetbrains-compose-material-icons-extended = { module = "org.jetbrains.compose.material:material-icons-extended", version.ref = "material-icons" }
+
+# Compose AndroidX
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+androidx-material3 = { module = "androidx.compose.material3:material3" }
+androidx-ui = { module = "androidx.compose.ui:ui" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+
+# Compose 적응형 레이아웃
+material3-adaptive = { module = "org.jetbrains.compose.material3.adaptive:adaptive", version.ref = "adaptive" }
+material3-adaptive-layout = { module = "org.jetbrains.compose.material3.adaptive:adaptive-layout", version.ref = "adaptive" }
+material3-adaptive-navigation = { module = "org.jetbrains.compose.material3.adaptive:adaptive-navigation", version.ref = "adaptive" }
+
+# Lifecycle, 상태 및 저장 상태
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "compose-lifecycle" }
+androidx-lifecycle-viewmodel-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "compose-lifecycle" }
+androidx-lifecycle-runtime-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "compose-lifecycle" }
+androidx-lifecycle-viewmodel-navigation3 = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-navigation3", version.ref = "compose-lifecycle" }
+androidx-lifecycle-process = { module = "androidx.lifecycle:lifecycle-process", version.ref = "androidx-lifecycle" }
+jetbrains-lifecycle-viewmodel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel", version.ref = "compose-lifecycle" }
+jetbrains-lifecycle-viewmodel-savedstate = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "compose-lifecycle" }
+jetbrains-savedstate = { module = "org.jetbrains.androidx.savedstate:savedstate", version.ref = "jetbrains-savedstate" }
+jetbrains-bundle = { module = "org.jetbrains.androidx.core:core-bundle", version.ref = "jetbrains-core-bundle" }
+androidx-navigation3-ui = { module = "org.jetbrains.androidx.navigation3:navigation3-ui", version.ref = "navigation3-ui" }
+
+# 인증/로그인 공용 라이브러리
+androidx-credentials = { module = "androidx.credentials:credentials", version.ref = "androidx-credentials" }
+androidx-credentials-play-services-auth = { module = "androidx.credentials:credentials-play-services-auth", version.ref = "androidx-credentials" }
+googleid = { module = "com.google.android.libraries.identity.googleid:googleid", version.ref = "googleid" }
+play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "play-services-auth" }
+
+# Android 코어 및 앱 컴포넌트
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
+androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "androidx-activity" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidx-appcompat" }
+core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "core-splashscreen" }
+
+# 테스트
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+kotlin-testJunit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
+compose-ui-test = { module = "org.jetbrains.compose.ui:ui-test", version.ref = "composeMultiplatform" }
+junit = { module = "junit:junit", version.ref = "junit" }
+androidx-test-core = { module = "androidx.test:core", version.ref = "androidx-test-core" }
+androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "androidx-espresso" }
+androidx-runner = { group = "androidx.test", name = "runner", version.ref = "androidx-runner" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-testExt" }
+
+# Kotlin 및 Kotlinx 런타임
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines-test" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
+
+# 의존성 주입(Koin)
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin" }
+koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel", version.ref = "koin" }
+koin-androidx-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
+koin-androidx-navigation = { group = "io.insert-koin", name = "koin-androidx-navigation", version.ref = "koin" }
+koin-core-viewmodel = { group = "io.insert-koin", name = "koin-core-viewmodel", version.ref = "koin" }
+koin-bom = { group = "io.insert-koin", name = "koin-bom", version.ref = "koin" }
+
+# 네트워킹(Ktor)
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktor-client-auth = { module = "io.ktor:ktor-client-auth", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+
+# 데이터 및 영속성
+datastore = { module = "androidx.datastore:datastore", version.ref = "datastore" }
+datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+sqlite-bundled = { module = "androidx.sqlite:sqlite-bundled", version.ref = "sqlite" }
+
+# Firebase 서비스
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-bom" }
+firebase-auth = { module = "com.google.firebase:firebase-auth" }
+firebase-functions = { module = "com.google.firebase:firebase-functions" }
+firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
+
+# 이미지, 권한 및 로깅
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
+coil-network-ktor = { module = "io.coil-kt.coil3:coil-network-ktor3", version.ref = "coil-network" }
+moko-permissions = { module = "dev.icerock.moko:permissions", version.ref = "moko" }
+moko-permissions-compose = { module = "dev.icerock.moko:permissions-compose", version.ref = "moko" }
+moko-permissions-notifications = { module = "dev.icerock.moko:permissions-notifications", version.ref = "moko" }
+touchlab-kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
+
+# 카카오 로그인 라이브러리
+kakao-user = { module = "com.kakao.sdk:v2-user", version.ref = "kakao" }
+
+# 빌드 로직 및 플러그인 클래스패스 아티팩트
+android-desugarJdkLibs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
+compose-gradlePlugin = { group = "org.jetbrains.kotlin", name = "compose-compiler-gradle-plugin", version.ref = "kotlin" }
+jetbrains-compose-gradlePlugin = { group = "org.jetbrains.compose", name = "compose-gradle-plugin", version.ref = "composeMultiplatform" }
+kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+kotlin-serialization-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-serialization", version.ref = "kotlin" }
+androidx-room-gradle-plugin = { module = "androidx.room:room-gradle-plugin", version.ref = "room" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+buildkonfig-gradlePlugin = { group = "com.codingfeline.buildkonfig", name = "buildkonfig-gradle-plugin", version.ref = "buildkonfig" }
+buildkonfig-compiler = { group = "com.codingfeline.buildkonfig", name = "buildkonfig-compiler", version.ref = "buildkonfig" }
+
+[plugins]
+# 내부 컨벤션 플러그인
+convention-android-application = { id = "com.yourssu.convention.android.application", version = "unspecified" }
+convention-android-application-compose = { id = "com.yourssu.convention.android.application.compose", version = "unspecified" }
+convention-cmp-application = { id = "com.yourssu.convention.cmp.application", version = "unspecified" }
+convention-kmp-library = { id = "com.yourssu.convention.kmp.library", version = "unspecified" }
+convention-cmp-library = { id = "com.yourssu.convention.cmp.library", version = "unspecified" }
+convention-cmp-feature = { id = "com.yourssu.convention.cmp.feature", version = "unspecified" }
+convention-android-uitest = { id = "com.yourssu.convention.android.uitest", version = "unspecified" }
+convention-buildkonfig = { id = "com.yourssu.convention.buildkonfig", version = "unspecified" }
+convention-room = { id = "com.yourssu.convention.room", version = "unspecified" }
+convention-cmp-uitest = { id = "com.yourssu.convention.cmp.uitest", version = "unspecified" }
+
+# 공식 및 서드파티 플러그인
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+androidKmpLibrary = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+room = { id = "androidx.room", version.ref = "room" }
+google-services = { id = "com.google.gms.google-services", version.ref = "google-services" }
+buildkonfig = { id = "com.codingfeline.buildkonfig", version.ref = "buildkonfig" }
+conveyor = { id = "dev.hydraulic.conveyor", version.ref = "conveyor" }
+
+[bundles]
+# commonMain용 Koin 번들
+koin-common = [
+    "koin-core",
+    "koin-compose",
+    "koin-compose-viewmodel"
+]
+
+# commonMain용 Ktor 번들
+ktor-common = [
+    "ktor-client-core",
+    "ktor-client-content-negotiation",
+    "ktor-serialization-kotlinx-json",
+    "ktor-client-auth",
+    "ktor-client-logging"
+]

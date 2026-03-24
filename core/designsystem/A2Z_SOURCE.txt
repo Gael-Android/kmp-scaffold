@@ -1,0 +1,4 @@
+Source URLs used for the bundled A2Z font files:
+
+- https://freesentation.blog/a2z
+- https://github.com/Freesentation/A2Z/raw/refs/heads/main/v1.001/%EC%97%90%EC%9D%B4%ED%88%AC%EC%A7%80%EC%B2%B4-otf-v1.001.zip

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="google_server_client_id">115799794853-oacgs5v639n63sn4602n6r8aoiqqffo7.apps.googleusercontent.com</string>
+    <string name="kakao_native_app_key">698fa10e399618cd1b4d090f08851b6d</string>
+    <string name="kakao_redirect_scheme">kakao698fa10e399618cd1b4d090f08851b6d</string>
+</resources>
